@@ -15,6 +15,8 @@ The motivation of this project is to store a collection of notes in one place th
 In a new terminal, type npm start and redirect yourself into the following link http://localhost:1000/notes.
 ## Usage
 
+https://drive.google.com/file/d/1sdzJlfq2WkNghOiIuGyoEOfTQPAHlQLI/view
+
 ## License
 MIT
 MIT License
