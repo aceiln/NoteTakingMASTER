@@ -55,7 +55,7 @@ app.delete('/api/notes/:id', async (req, res) => {
     });
 })
 
-pp.get('/home', async (req, res) => {
+app.get('/home', async (req, res) => {
     res.sendFile(__dirname + '/public/index.html')
 })
 app.get('/*', async (req, res) => {
