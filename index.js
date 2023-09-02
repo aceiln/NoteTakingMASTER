@@ -37,3 +37,21 @@ app.post('/api/notes', express.raw({ type: 'application/json' }), async (req, re
         }
     });
 })
+
+app.delete('/api/notes/:id', async (req, res) => {
+    const id = req.params.id
+
+    let data = JSON.parse(fs.readFileSync(__dirname + '/db/db.json',
+        { encoding: 'utf8', flag: 'r' }));
+
+    const newData = data.filter(note=> note.id !== id)
+
+    fs.writeFile(__dirname+"/db/db.json", JSON.stringify(newData), (err) => {
+        if (err)
+            console.log(err);
+        else {
+            res.json(data);
+        }
+    });
+})
+
