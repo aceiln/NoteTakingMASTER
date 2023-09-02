@@ -54,4 +54,3 @@ app.delete('/api/notes/:id', async (req, res) => {
         }
     });
 })
-
